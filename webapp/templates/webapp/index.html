@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Simple Web Page</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+      }
+      header,
+      footer {
+        background-color: #f8f9fa;
+        padding: 10px;
+        text-align: center;
+      }
+      nav {
+        margin: 10px 0;
+      }
+      nav a {
+        margin: 0 15px;
+        text-decoration: none;
+        color: #007bff;
+      }
+      .content {
+        margin: 20px;
+        padding: 20px;
+        background-color: #e9ecef;
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <h1>My Web Page for assingment</h1>
+      
+    </header>
+    <div class="content">
+      <p>Welcome to my simple web page. This is the main content area.</p>
+      <p>Current time: {{ time }}</p>
+      <form action="/submit" method="POST">
+        {% csrf_token %}
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name" />
+        <br /><br />
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" />
+        <br /><br />
+        <input type="submit" value="Submit" />
+      </form>
+    </div>
+    <footer>
+      <p>Contact us: harshitsharma4212@gmail.com</p>
+    </footer>
+  </body>
+</html>
